@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  height: 100dvh;
+  background-color: #d69e36;
+}
+progress::-webkit-progress-value {
+  background: #e39d19;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 1407px) {
+  .footer {
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 1289px) {
+  .header {
+    justify-content: space-around;
+  }
+  .footer {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 1138px) {
+  .footer__grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .user__profile {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 870px;
+    transform: translate(-380px, 0px);
+  }
+  .weather__data {
+    width: 870px;
+  }
+  .weather__data__icons {
+    width: 100%;
+    overflow: visible;
+  }
+  .arrow {
+    display: none;
+  }
+  .weather__thing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .user__icons {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 747px) {
+  .footer {
+    transform: scale(0.7);
+    position: relative;
+    bottom: 200px;
+  }
+  .main {
+    height: 1500px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 635px) {
+  .footer {
+    transform: scale(0.6);
+  }
+}
+@media (max-width: 542px) {
+  .footer {
+    transform: scale(0.5);
+    position: relative;
+    bottom: 300px;
+  }
+  .main {
+    height: 1300px;
+  }
+  .weather__title {
+    font-size: 30px;
+  }
+  .selection__icon {
+    font-size: 16px;
+  }
+  .weather__img {
+    width: 250px;
+    height: 190px;
+  }
+}
+@media (max-width: 468px) {
+  .footer {
+    transform: scale(0.4);
+    position: relative;
+    bottom: 380px;
+  }
+  .main {
+    height: 1000px;
+    overflow: hidden;
+  }
+}
