@@ -17,7 +17,7 @@ function Main() {
   const fetchData = async () => {
     try {
       const res = await axios.get(
-        `http://api.weatherapi.com/v1/current.json?key=9fcbf2cb506b4e759fe63833242208&q=${country}&aqi=no`
+        `https://api.weatherapi.com/v1/current.json?key=9fcbf2cb506b4e759fe63833242208&q=${country}&aqi=no`
       );
       setData(res.data.current);
     } catch (err) {
