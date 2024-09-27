@@ -15,10 +15,14 @@ function Main() {
   const [country, setCountry] = useState("Kabul");
   const [data, setData] = useState([]);
   const fetchData = async () => {
-    const res = await axios.get(
-      `http://api.weatherapi.com/v1/current.json?key=9fcbf2cb506b4e759fe63833242208&q=${country}&aqi=no`
-    );
-    setData(res.data.current);
+    try {
+      const res = await axios.get(
+        `http://api.weatherapi.com/v1/current.json?key=9fcbf2cb506b4e759fe63833242208&q=${country}&aqi=no`
+      );
+      setData(res.data.current);
+    } catch (err) {
+      console.log(err);
+    }
   };
   useEffect(() => {
     fetchData();
